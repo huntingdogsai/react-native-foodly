@@ -201,7 +201,7 @@ function App(): React.JSX.Element {
             ))
           )}
           <View style={styles.row}><Text style={styles.grow}>Subtotal</Text><Text style={styles.bold}>{formatPrice(subtotal)}</Text></View>
-          {/* Clear cart empties the basket in one tap; disabled while the cart is already empty. */}
+          {/* Clear cart empties the whole basket in a single tap; disabled while the cart is already empty. */}
           <View style={styles.footerRow}>
             <Button label="Back" onPress={() => setScreen('home')} />
             <Button label="Clear cart" onPress={() => setCart([])} disabled={cart.length === 0} />
