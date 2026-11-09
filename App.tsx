@@ -203,6 +203,7 @@ function App(): React.JSX.Element {
           <View style={styles.row}><Text style={styles.grow}>Subtotal</Text><Text style={styles.bold}>{formatPrice(subtotal)}</Text></View>
           <View style={styles.footerRow}>
             <Button label="Back" onPress={() => setScreen('home')} />
+            <Button label="Clear cart" onPress={() => setCart([])} disabled={cart.length === 0} />
             <Button label="Checkout" onPress={() => setScreen('checkout')} disabled={cart.length === 0} />
           </View>
         </View>
