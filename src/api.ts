@@ -1,6 +1,6 @@
 // The Foodly backend client — same contract as examples/foodly-backend/server.mjs (shared by every
 // Foodly demo). From the Android emulator the host is 10.0.2.2; override with (global as any).__FOODLY_API__.
-const BASE: string = (globalThis as { __FOODLY_API__?: string }).__FOODLY_API__ ?? 'http://10.0.2.2:8787';
+const BASE: string = (globalThis as { __FOODLY_API__?: string }).__FOODLY_API__ ?? 'https://huntingdogs-foodly-api-snbl7sdvbq-ew.a.run.app';
 
 export interface Product {
   id: string;
@@ -105,3 +105,5 @@ export async function placeOrder(
 export function formatPrice(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
 }
+
+// Foodly API client.
